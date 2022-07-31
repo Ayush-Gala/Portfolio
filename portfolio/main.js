@@ -165,7 +165,6 @@ loader6.load('media/saturn/scene.gltf', function (gltf) {
 	gltf.scene.position.x = 125;				    //Position (x = right+ left-) 
   gltf.scene.position.y = 0;				    //Position (y = up+, down-)
 	gltf.scene.position.z = 0;
-  gltf.scene.rotation.z += 10;
   scene.add(sat_mod);
   addOrbitPath(125);
 });
@@ -214,6 +213,10 @@ function animate() {
   if(ven_mod) ven_mod.rotation.y += 0.09;
   if(earth_mod) earth_mod.rotation.y += 0.05;
   if(mars_mod) mars_mod.rotation.y += 0.03;
+  if(jup_mod) jup_mod.rotation.y += 0.03;
+  if(sat_mod) sat_mod.rotation.y += 0.02;
+  if(ura_mod) ura_mod.rotation.y += 0.01;
+  if(nept_mod) nept_mod.rotation.y += 0.008;
 
   //rotating matrix 
   matrix.makeRotationY(Math.PI / 2000);
